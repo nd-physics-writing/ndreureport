@@ -1,0 +1,18 @@
+# backup
+*~
+
+# LaTeX
+*.bbl
+*.aux
+*.blg
+*.fgx
+*.fls
+*.log
+*.tbx
+*.fdb_latexmk
+*.synctex.gz
+*.vdx
+
+# output
+/example*.pdf
+/example.out
