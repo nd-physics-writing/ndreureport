@@ -30,17 +30,39 @@
 
 \lipsum[3]
 
+Here is an example of how you reference papers. The BibTeX citations go in your .bib file. This is some information \cite{sample}.
+
 \subsection{Subsection}
 
 \lipsum[4]
+
+Let's show an example of how you add in math. You can add it inline like this: $a = b + c$, or you can add it outside of the text.
+
+\begin{equation}
+    a = b + c
+    \label{eq:a}
+\end{equation}
 
 \subsection{Subsection}
 
 \lipsum[3]
 
+Now we'll do inline references to figures/tables/equations that you have in your paper. If you look at Figure \ref{fig:test} you'll see a sample figure. This has nothing to do with Equation \ref{eq:a}.
+
 \section{Background}
 
 \lipsum[5]
+
+Here's a sample table:
+
+\begin{center}
+    \begin{tabular}{c|l|r}
+        Col 1 & Col 2 & Col 3 \\ \hline
+        A & a & 1.0 \\ 
+        B & b & 2.0 \\  
+        C & c & 3.0    
+    \end{tabular}
+\end{center}
 
 \section{Methods}
 
@@ -49,6 +71,17 @@
 \section{Results}
 
 \lipsum[6]
+
+Here is a sample figure:
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{fig_2.eps}
+    \caption{Figure caption goes here}
+    \label{fig:test}
+\end{figure}
+
+The ht! options tell \LaTeX where to put the figure (here (h), top (t), and override what it thinks is best(!)).
 
 \section{Conclusion}
 

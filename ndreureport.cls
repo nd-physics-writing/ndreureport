@@ -124,8 +124,9 @@
 
 \RequirePackage{amsmath,amsthm}
 
-\RequirePackage{natbib}
-\bibliographystyle{aipnum4-2}
+\RequirePackage[sort&compress]{natbib}
+\bibliographystyle{apsrev4-2}
+\setcitestyle{numbers,square}
 
 
 \RequirePackage{graphicx}
