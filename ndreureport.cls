@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Notre Dame Physics REU Final Report
 % LaTeX Template
-% Version 1.0 (2021/07/21)
+% Version 1.0.1 (2021/07/19)
 %
 % Original authors:
 % Patrick J. Fasano (pfasano@nd.edu) and Charlotte M. Wood (cwood12@nd.edu)
@@ -14,7 +14,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{ndreureport}[2021/07/12 ND Physics REU Report class]
+\ProvidesClass{ndreureport}[2021/07/19 ND Physics REU Report class]
 
 \DeclareOption{onecolumn}{\OptionNotUsed}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
@@ -118,5 +118,12 @@
 
 \RequirePackage{hyperref}
 
-\RequirePackage{setspace}
+\RequirePackage[nodisplayskipstretch]{setspace}
 \doublespacing
+
+% fix spacing of bibliography
+\let\@theoldbibliography\thebibliography
+\renewcommand{\thebibliography}[1]{%
+  \singlespacing%
+  \@theoldbibliography{#1}%
+}
